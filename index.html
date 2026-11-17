@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <title>KakoBuy spreadsheet | CAFANS Finds, Sizing & QC Guide</title>
+  <meta name="description" content="Browse real CAFANS shoes, hoodies, T-shirts and jackets. Filter this KakoBuy spreadsheet and check sizing, warehouse QC photos and shipping before you order.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="KakoBuy spreadsheet | CAFANS Finds, Sizing & QC Guide">
+  <meta property="og:description" content="Browse CAFANS finds by category and check what to measure, verify and budget before ordering.">
+  <!--
+    File: index.html.
+    Google challenged the direct search request, so exact first-page positions are unverified.
+    Search results reviewed: https://spreadsheetkakobuy.com/ (category counts, CNY and QC),
+    https://kakobuy-spreadsheet.com/ (category search, currency and QC),
+    https://ssfinds.com/kakobuy-spreadsheet (category shortcuts and ordering tutorial).
+    This page adds source-linked CAFANS estimates, a searchable static catalog and category-specific checks.
+    Catalog snapshot: https://cafans.com/ on 2026-11-17.
+    Indexing submission is pending. The public URL and verified site access are required.
+    Add the absolute canonical URL after deployment. Then use Google Search Console URL Inspection
+    and Bing Webmaster Tools URL Submission for the deployed URL.
+    https://developers.google.com/search/docs/crawling-indexing/ask-google-to-recrawl
+    https://www.bing.com/webmasters/help/URL-Submission-62f2860b
+  -->
+  <style>
+    :root{color-scheme:light;--ink:#142d24;--muted:#4c6258;--paper:#f4f6ef;--line:#d5e0d6;--green:#14563d;--white:#fff}
+    *,*::before,*::after{box-sizing:border-box}
+    body{margin:0;background:var(--paper);color:var(--ink);font:1rem/1.6 "Instrument Sans",system-ui,sans-serif}
+    [hidden]{display:none!important}
+    a{color:var(--green);text-underline-offset:.2em}
+    :focus-visible{outline:3px solid #237f57;outline-offset:4px}
+    .wrap{width:min(70rem,calc(100% - 2rem));margin-inline:auto}
+    header .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.5rem;padding-block:1rem}
+    nav,.actions,.categories{display:flex;flex-wrap:wrap;gap:.65rem 1rem}
+    .hero{background:#14392b;color:#fff;padding:clamp(3rem,9vw,7rem) 0;text-align:center}
+    h1,h2,h3,p{margin-top:0}
+    h1{font-size:clamp(2.4rem,7vw,5.4rem);letter-spacing:-.06em;line-height:1.04;margin-bottom:1rem;overflow-wrap:anywhere}
+    h2{font-size:clamp(1.65rem,4vw,2.45rem);letter-spacing:-.035em;line-height:1.15;margin-bottom:.75rem}
+    h3{font-size:1.1rem;line-height:1.3;margin-bottom:.3rem}
+    .hero p{max-width:42rem;margin-inline:auto;color:#e2eee6}
+    .actions{justify-content:center}
+    .button{padding:.65rem 1rem;border:1px solid #d8f3df;border-radius:.65rem;color:#fff;text-decoration:none;font-weight:700}
+    .button.primary{background:#d8f3df;color:var(--ink)}
+    main section:not(.hero){padding-block:2.7rem;border-bottom:1px solid var(--line)}
+    .muted{color:var(--muted)}
+    .filters{display:flex;flex-wrap:wrap;gap:.75rem;margin:1rem 0 .5rem}
+    label{display:grid;gap:.25rem;font-weight:650;flex:1 1 13rem;min-width:0}
+    input,select{font:inherit;color:inherit;background:#fff;border:1px solid #82978a;border-radius:.5rem;padding:.55rem;width:100%}
+    .catalog,.checks{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,14rem),1fr));gap:1rem}
+    .catalog{list-style:none;padding:0;margin:1rem 0}
+    .card,.check{background:var(--white);border:1px solid var(--line);border-radius:.85rem;overflow:hidden}
+    .card a{display:block;height:100%;color:inherit;text-decoration:none}
+    .card a:hover h3{text-decoration:underline}
+    .card a:focus-visible{outline-offset:-4px}
+    .card img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:contain;background:#ecefe9}
+    .copy,.check{padding:1rem}
+    .copy p,.check p{margin-bottom:0}
+    .price{margin-top:.45rem;color:var(--green);font-weight:750}
+    .categories a{padding:.4rem .65rem;border:1px solid var(--line);border-radius:.5rem}
+    details{padding:.85rem 0;border-bottom:1px solid var(--line)}
+    details p{margin:.5rem 0 0}
+    summary{font-weight:700;cursor:pointer}
+    footer{padding:1.25rem 0;color:var(--muted)}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "KakoBuy spreadsheet",
+    "description": "A CAFANS product selection and an independent guide to checking size, warehouse QC photos and shipping quotes.",
+    "inLanguage": "en",
+    "mainEntity": {
+      "@type": "ItemList",
+      "name": "Featured CAFANS finds",
+      "itemListElement": [
+        {"@type":"ListItem","position":1,"name":"Leather Slides","url":"https://cafans.com/goods-158791.html"},
+        {"@type":"ListItem","position":2,"name":"Platform Slides","url":"https://cafans.com/goods-158790.html"},
+        {"@type":"ListItem","position":3,"name":"Sweatshirt","url":"https://cafans.com/goods-158792.html"},
+        {"@type":"ListItem","position":4,"name":"Thug Club - Rock Hoodie","url":"https://cafans.com/goods-158280.html"},
+        {"@type":"ListItem","position":5,"name":"Unisex Embroidered Oversized T-Shirt","url":"https://cafans.com/goods-158200.html"},
+        {"@type":"ListItem","position":6,"name":"Unisex T-Shirt","url":"https://cafans.com/goods-158110.html"},
+        {"@type":"ListItem","position":7,"name":"Corteiz Jacket","url":"https://cafans.com/goods-158279.html"},
+        {"@type":"ListItem","position":8,"name":"Jacket - 0608260","url":"https://cafans.com/goods-158158.html"}
+      ]
+    }
+  }
+  </script>
+<link rel="canonical" href="https://kakobuyfinds.github.io/wgmzy/">
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <strong>KakoBuy shopping guide</strong>
+      <nav aria-label="On this page">
+        <a href="#catalog">Product catalog</a>
+        <a href="#checks">Sizing and QC</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero" aria-labelledby="page-title">
+      <div class="wrap">
+        <h1 id="page-title">KakoBuy spreadsheet</h1>
+        <p>Browse shoes, hoodies, T-shirts and jackets from CAFANS. Compare estimated item prices, then check the exact size, warehouse photos and shipping quote before ordering.</p>
+        <div class="actions">
+          <a class="button primary" href="https://cafans.com/">KakoBuy spreadsheet</a>
+          <a class="button" href="https://cafans.com/">Buy it now</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="wrap">
+      <section id="catalog" aria-labelledby="catalog-title">
+        <h2 id="catalog-title">CAFANS product catalog</h2>
+        <p class="muted">Featured listings from <a href="https://cafans.com/">CAFANS</a>, checked <time datetime="2026-11-17">November 17, 2026</time>. Estimated item prices are in USD. Open the current listing to confirm price, options and availability.</p>
+        <div id="filters" class="filters" hidden>
+          <label>Product name <input id="query" type="search" placeholder="Search finds"></label>
+          <label>Category
+            <select id="category">
+              <option value="">All categories</option>
+              <option value="shoes">Shoes</option>
+              <option value="hoodies">Hoodies and sweaters</option>
+              <option value="tees">T-shirts</option>
+              <option value="jackets">Jackets</option>
+            </select>
+          </label>
+        </div>
+        <p id="result-count" class="muted" role="status" hidden></p>
+        <ul class="catalog" id="products">
+          <li class="card" data-category="shoes"><a href="https://cafans.com/goods-158791.html">
+            <img src="https://si.geilicdn.com/open1769158365-252808396-70340000019822fe6f2d0a23b491_1200_1200.jpg" alt="" width="320" height="320" loading="lazy" decoding="async">
+            <div class="copy"><h3>Leather Slides</h3><p class="muted">Shoes</p><p class="price">$62.36</p></div>
+          </a></li>
+          <li class="card" data-category="shoes"><a href="https://cafans.com/goods-158790.html">
+            <img src="https://si.geilicdn.com/open1769158365-252808396-1400000001985b1f67440a8133b0_750_750.jpg" alt="" width="320" height="320" loading="lazy" decoding="async">
+            <div class="copy"><h3>Platform Slides</h3><p class="muted">Shoes</p><p class="price">$46.67</p></div>
+          </a></li>
+          <li class="card" data-category="hoodies"><a href="https://cafans.com/goods-158792.html">
+            <img src="https://si.geilicdn.com/open1862809525-1234478995-56360000019a9d1b5cc60aa081c2_1200_1200.jpg" alt="" width="320" height="320" loading="lazy" decoding="async">
+            <div class="copy"><h3>Sweatshirt</h3><p class="muted">Hoodies and sweaters</p><p class="price">$27.50</p></div>
+          </a></li>
+          <li class="card" data-category="hoodies"><a href="https://cafans.com/goods-158280.html">
+            <img src="https://si.geilicdn.com/open1806012509-1234478995-08f200000197108df0eb0a8115c2_800_800.jpg" alt="" width="320" height="320" loading="lazy" decoding="async">
+            <div class="copy"><h3>Thug Club - Rock Hoodie</h3><p class="muted">Hoodies and sweaters</p><p class="price">$37.22</p></div>
+          </a></li>
+          <li class="card" data-category="tees"><a href="https://cafans.com/goods-158200.html">
+            <img src="https://si.geilicdn.com/open1792148229-1234478995-4b8f00000196ff70111b0aa08290_1066_1066.jpg" alt="" width="320" height="320" loading="lazy" decoding="async">
+            <div class="copy"><h3>Unisex Embroidered Oversized T-Shirt</h3><p class="muted">T-shirts</p><p class="price">$32.64</p></div>
+          </a></li>
+          <li class="card" data-category="tees"><a href="https://cafans.com/goods-158110.html">
+            <img src="https://si.geilicdn.com/open1868238178-1234478995-13f3000001902a52b9de0a22d234_960_960.jpg" alt="" width="320" height="320" loading="lazy" decoding="async">
+            <div class="copy"><h3>Unisex T-Shirt</h3><p class="muted">T-shirts</p><p class="price">$29.72</p></div>
+          </a></li>
+          <li class="card" data-category="jackets"><a href="https://cafans.com/goods-158279.html">
+            <img src="https://si.geilicdn.com/open1806012509-1234478995-093600000197108e2db10a8115c2_1000_1000.jpg" alt="" width="320" height="320" loading="lazy" decoding="async">
+            <div class="copy"><h3>Corteiz Jacket</h3><p class="muted">Jackets</p><p class="price">$42.78</p></div>
+          </a></li>
+          <li class="card" data-category="jackets"><a href="https://cafans.com/goods-158158.html">
+            <img src="https://si.geilicdn.com/open1792148229-1234478995-512100000197bb65dee90a23b4de_1080_1080.jpg" alt="" width="320" height="320" loading="lazy" decoding="async">
+            <div class="copy"><h3>Jacket - 0608260</h3><p class="muted">Jackets</p><p class="price">$27.50</p></div>
+          </a></li>
+        </ul>
+        <nav class="categories" aria-label="Full CAFANS categories">
+          <a href="https://cafans.com/category-911-Shoes.html">All shoes</a>
+          <a href="https://cafans.com/category-912-Hoodies%2FSweaters.html">All hoodies and sweaters</a>
+          <a href="https://cafans.com/category-913-T-Shirts.html">All T-shirts</a>
+          <a href="https://cafans.com/category-914-Jackets.html">All jackets</a>
+        </nav>
+      </section>
+
+      <section id="checks" aria-labelledby="checks-title">
+        <h2 id="checks-title">What to check before ordering</h2>
+        <p>Save the exact item link, color, size and currency in your shortlist. Compare seller measurements with an item that already fits. When warehouse quality-control (QC) photos are available, check that they match the option you ordered.</p>
+        <div class="checks">
+          <article class="check"><h3>Shoes</h3><p>Confirm the size system and compare any stated insole length with a pair that fits. In QC photos, review the size label and look at both soles and toe boxes.</p></article>
+          <article class="check"><h3>Hoodies and sweaters</h3><p>Compare laid-flat chest width and body length. Double the flat chest width only when you need to compare it with a circumference.</p></article>
+          <article class="check"><h3>T-shirts</h3><p>Compare shoulder width and body length for the fit you want. Look at print or embroidery placement and check the color label.</p></article>
+          <article class="check"><h3>Jackets</h3><p>Measure over the layers you expect to wear. Review sleeve length, the main closure and any listed lining before committing.</p></article>
+        </div>
+      </section>
+
+      <section id="shipping" aria-labelledby="shipping-title">
+        <h2 id="shipping-title">Compare the delivered cost</h2>
+        <p>Add the item price, domestic delivery to the warehouse, applicable agent fees, international postage and any estimated taxes or duties. Convert each line to the same currency before comparing quotes, and check which charges the quoted shipping route already includes.</p>
+        <p>For bulky items such as jackets or boxed shoes, ask for the packed dimensions and weight. Check the shipping route’s billing rules because the final charge can depend on dimensional weight and rounding.</p>
+      </section>
+
+      <section id="faq" aria-labelledby="faq-title">
+        <h2 id="faq-title">KakoBuy spreadsheet FAQ</h2>
+        <details><summary>What is this KakoBuy spreadsheet?</summary><p>It is an independent browsing guide with selected CAFANS listings, category filters and buying checks. The product cards open on CAFANS.</p></details>
+        <details><summary>How do I use a listing with KakoBuy?</summary><p>Open the CAFANS product page and check whether KakoBuy is listed as an agent for that item. Confirm the source listing and chosen variant before placing an order.</p></details>
+        <details><summary>Are the catalog prices the final checkout amounts?</summary><p>The displayed amounts are CAFANS item estimates in USD. Check the current listing and request a shipping quote for your destination to estimate the delivered cost.</p></details>
+        <details><summary>Where can I see QC photos?</summary><p>Check the listing or your agent account for available warehouse photos. Compare the item label, color, measurements and visible condition against your order before approving shipment.</p></details>
+      </section>
+    </div>
+  </main>
+  <footer class="wrap">Independent shopping guide. Product listings and estimates are sourced from CAFANS.</footer>
+  <script>
+    const filters = document.getElementById('filters');
+    const query = document.getElementById('query');
+    const category = document.getElementById('category');
+    const status = document.getElementById('result-count');
+    const cards = Array.from(document.querySelectorAll('#products .card'));
+
+    function filterCatalog() {
+      const search = query.value.trim().toLowerCase();
+      let count = 0;
+      for (const card of cards) {
+        const name = card.querySelector('h3').textContent.toLowerCase();
+        const matchesCategory = !category.value || card.dataset.category === category.value;
+        card.hidden = !matchesCategory || !name.includes(search);
+        if (!card.hidden) count += 1;
+      }
+      status.textContent = count
+        ? `Showing ${count} of ${cards.length} products.`
+        : 'No matching products. Try another name or category.';
+    }
+
+    filters.hidden = false;
+    status.hidden = false;
+    query.addEventListener('input', filterCatalog);
+    category.addEventListener('change', filterCatalog);
+    filterCatalog();
+  </script>
+</body>
+</html>
